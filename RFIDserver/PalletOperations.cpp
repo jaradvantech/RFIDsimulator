@@ -141,10 +141,10 @@ void InsertPallet(std::string filename, int PalletNumber)
 
 bool PalletFileExists(std::string filename)
 {
-	std::ifstream FileToCheck(filename);
+	std::ifstream FileToCheck(filename); //85
 
 	//Try to read file, will return wether file exists or not
-	return FileToCheck;
+	return FileToCheck.good();
 }
 
 bool PrintPallets(void)
